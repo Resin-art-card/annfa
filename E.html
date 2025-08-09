@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anand S - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #ff0000, #990000);
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    nav {
+      text-align: center;
+      padding: 12px;
+      background-color: rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      margin-bottom: 8px;
+      font-size: 2.4em;
+    }
+    header p {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .qr-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    .qr-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 200px;
+    }
+    .qr-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    footer {
+      padding: 40px 20px;
+      background-color: rgba(0,0,0,0.4);
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Anand S</h1>
+    <p>Mechatronics | PLC | SCADA</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Anand. I specialize in Mechatronics with expertise in PLC, SCADA, and automation systems.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>PLC Programming · SCADA Systems · Industrial Automation</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Phone: <a href="tel:+919898765656" style="color:yellow;">+91 9898765656</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/" style="color:yellow;">@yourhandle</a></p>
+    <div class="qr-container">
+      <div class="qr-box">
+        <h3>Save My Contact</h3>
+        <img src="qr-vcard.png" alt="vCard QR">
+      </div>
+      <div class="qr-box">
+        <h3>Visit My Website</h3>
+        <img src="qr-website.png" alt="Website QR">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Anand S. All rights reserved.
+  </footer>
+
+  <!-- Hidden Background Music -->
+  <audio id="bg-music" autoplay loop muted>
+    <source src="music.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById('bg-music');
+
+    // Enable audio when user first interacts
+    function enableAudio() {
+      audio.muted = false;
+      audio.play();
+      document.removeEventListener('click', enableAudio);
+      document.removeEventListener('touchstart', enableAudio);
+    }
+
+    document.addEventListener('click', enableAudio);
+    document.addEventListener('touchstart', enableAudio);
+  </script>
+
+</body>
+</html>
